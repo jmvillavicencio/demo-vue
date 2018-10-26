@@ -1,6 +1,6 @@
 # demo-vue
 
-> My grand Nuxt.js project
+> Simple Vue demo
 
 ## Build Setup
 
@@ -18,5 +18,3 @@ $ yarn start
 # generate static project
 $ yarn run generate
 ```
-
-For detailed explanation on how things work, checkout [Nuxt.js docs](https://nuxtjs.org).
