@@ -1,20 +1,13 @@
-const mockedCommits = require('../static/mocks/githubCommits.json');
-const mockedRepos = require('../static/mocks/githubRepos.json');
+import axios from '../plugins/axios.js'
 
-const getCommits = () => {
-  return new Promise((resolve) => {
-    setTimeout(() => {
-      resolve(mockedCommits);
-    }, 7100);
-  });
+const getCommits = async () => {
+  let {data} = await axios.get('github/commit/totalByDate');
+  return data;
 }
 
-const getRepos = () => {
-  return new Promise((resolve) => {
-    setTimeout(() => {
-      resolve(mockedRepos);
-    }, 700);
-  });
+const getRepos = async () => {
+  let {data} = await axios.get('github/repo/allParticipations');
+  return data;
 }
 
 export default {

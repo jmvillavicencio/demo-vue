@@ -13,10 +13,8 @@ export default () => {
   return new Vuex.Store({
     state: {},
     actions: {
-      nuxtServerInit: async ({ dispatch }) => {
-        setTimeout(() => {
-          dispatch('api/checkStatus');
-        }, 5000);
+      nuxtServerInit: async ({ dispatch, commit }) => {
+        return dispatch('api/checkStatus');
       },
     },
     mutations: {},

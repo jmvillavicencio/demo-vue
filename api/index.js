@@ -1,13 +1,13 @@
 import github from './github';
-import jobs from './jobs';
-import projects from './projects';
+import job from './job';
+import project from './project';
 import status from './status';
 import stackoverflow from './stackoverflow';
 
 export default {
   github,
-  jobs,
-  projects,
+  job,
+  project,
   status,
   stackoverflow,
 };

@@ -28,7 +28,7 @@ export default {
   methods: {
     buildChart() {
       this.renderChart({
-        labels: Object.keys(this.commitsList).map(e => moment(e, 'x').format('DD-MM-YYYY')),
+        labels: Object.keys(this.commitsList).map(e => moment(e).format('DD-MM-YYYY')),
         datasets: [
           {
             label: 'Commits in github',

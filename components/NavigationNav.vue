@@ -50,6 +50,8 @@
         outline
         small
         color="blue darken-4"
+        href="https://www.linkedin.com/in/juan-manuel-villavicencio-32079558/"
+        target="_blank"
       >
         hire
       </v-btn>

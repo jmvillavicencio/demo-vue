@@ -1,23 +1,17 @@
 import Vue from 'vue';
 import Vuex from 'vuex';
 import { createMatchElementArray } from '../../helpers/stores';
+import Api from '../../api';
 
-const _projects = require('../../static/mocks/projects.json');
 export const state = () => ({
   list: [],
 });
 
 export const actions = {
   async fetchAll({ commit, dispatch }) {
-    await new Promise((resolve, reject) => {
-      setTimeout(() => {
-        const projects = _projects.map(e => ({ ...e, type: 'project' }))
-        dispatch('experiences/addList', projects, { root: true });
-        commit('setList', projects);
-        resolve();
-      }, 3400);
-    });
-    return;
+    const projects = await Api.project.getAll();
+    dispatch('experiences/addList', projects, { root: true });
+    commit('setList', projects);
   },
 };
 

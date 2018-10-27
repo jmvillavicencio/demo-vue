@@ -8,9 +8,10 @@ export const state = {
 };
 
 export const actions = {
-  checkStatus({ commit }) {
-    const status = Api.status.ping();
+  async checkStatus({ commit }) {
+    const status = await Api.status.ping();
     commit('setStatus', status);
+    return status;
   },
 };
 

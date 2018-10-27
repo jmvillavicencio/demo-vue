@@ -28,7 +28,7 @@ export default {
   methods: {
     buildChart() {
       this.renderChart({
-        labels: Object.keys(this.answersList).map(e => moment(e, 'x').format('DD-MM-YYYY')),
+        labels: Object.keys(this.answersList).map(e => moment(e).format('DD-MM-YYYY')),
         datasets: [
           {
             label: 'Answers in StackOverflow',

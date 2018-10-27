@@ -2,7 +2,9 @@ const pkg = require('./package')
 
 module.exports = {
   mode: 'universal',
-
+  env: {
+    APIURL: process.env.APIURL || '',
+  },
   /*
   ** Headers of the page
   */

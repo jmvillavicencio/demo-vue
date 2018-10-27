@@ -1,11 +1,9 @@
-const mockedAnswers = require('../static/mocks/stackoverflow.json');
-const getAnswers = () => {
-  return new Promise((resolve) => {
-    setTimeout(() => {
-      resolve(mockedAnswers);
-    }, 1900);
-  });
-}
+import axios from '../plugins/axios.js'
+
+const getAnswers = async () => {
+  let {data} = await axios.get('stackoverflow/totalAnswersByDate');
+  return data;
+};
 
 export default {
   getAnswers,
