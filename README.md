@@ -2,6 +2,13 @@
 
 > Simple Vue demo with Nuxt.js and Vuex
 
+## Dependencies
+* API should be enabled. Please clone the Demo Api repo.
+```
+git clone git@github.com:jmvillavicencio/demo-api.git
+```
+And then follow the steps in the [README.md file](https://github.com/jmvillavicencio/demo-api/blob/master/README.md)
+
 ## Build Setup
 
 ``` bash
