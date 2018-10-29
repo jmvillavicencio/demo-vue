@@ -1,7 +1,7 @@
 {
   "name": "demo-vue",
   "version": "1.0.0",
-  "description": "My grand Nuxt.js project",
+  "description": "Nuxt and vue demo",
   "author": "Juan Manuel Villavicencio",
   "private": true,
   "scripts": {
